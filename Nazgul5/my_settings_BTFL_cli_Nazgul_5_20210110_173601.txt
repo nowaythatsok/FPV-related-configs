@@ -1,0 +1,264 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / STM32F405 (S405) 4.2.0 Jun 14 2020 / 03:04:22 (8f2d21460) MSP API: 1.43
+# config: manufacturer_id: IFRC, board_name: IFLIGHT_SUCCEX_E_F4, version: 56f10df3, date: 2020-08-02T12:23:22Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name IFLIGHT_SUCCEX_E_F4
+manufacturer_id IFRC
+mcu_id 003500503252501920383856
+signature 
+
+# name: Nazgul 5
+
+# resources
+resource MOTOR 5 B06
+resource PPM 1 B08
+resource PWM 1 B08
+resource SERIAL_TX 4 NONE
+resource SERIAL_RX 4 NONE
+resource I2C_SCL 2 NONE
+resource I2C_SDA 2 NONE
+resource ESCSERIAL 1 B08
+resource PULLDOWN 1 B08
+
+# timer
+timer A03 AF3
+# pin A03: TIM9 CH2 (AF3)
+timer B08 AF3
+# pin B08: TIM10 CH1 (AF3)
+timer A09 AF1
+# pin A09: TIM1 CH2 (AF1)
+timer A10 AF1
+# pin A10: TIM1 CH3 (AF1)
+timer A02 AF2
+# pin A02: TIM5 CH3 (AF2)
+timer B10 AF1
+# pin B10: TIM2 CH3 (AF1)
+timer B11 AF1
+# pin B11: TIM2 CH4 (AF1)
+
+# dma
+dma pin A09 0
+# pin A09: DMA2 Stream 6 Channel 0
+dma pin A10 0
+# pin A10: DMA2 Stream 6 Channel 0
+dma pin A02 0
+# pin A02: DMA1 Stream 0 Channel 6
+dma pin B10 0
+# pin B10: DMA1 Stream 1 Channel 3
+dma pin B11 0
+# pin B11: DMA1 Stream 7 Channel 3
+
+# feature
+feature -LED_STRIP
+feature -DISPLAY
+feature AIRMODE
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# map
+map TAER1234
+
+# serial
+serial 5 1024 115200 57600 0 115200
+
+# led
+led 0 0,0::C:0
+led 1 0,0::C:0
+led 2 0,0::C:0
+led 3 0,0::C:0
+led 4 0,0::C:0
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 900 1200 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 13 2 1800 2100 0 0
+aux 4 35 3 1800 2100 0 0
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B CUSTOM  5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E CUSTOM  5705 5685 5665    0 5885 5905    0    0
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I CUSTOM  5732 5765 5828 5840 5866 5740    0    0
+vtxtable powerlevels 5
+vtxtable powervalues 25 100 200 400 600
+vtxtable powerlabels 25 100 200 400 600
+
+# master
+set gyro_lowpass2_hz = 350
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 250
+set dyn_notch_min_hz = 100
+set dyn_notch_max_hz = 300
+set dyn_lpf_gyro_min_hz = 280
+set dyn_lpf_gyro_max_hz = 700
+set acc_calibration = -65,-20,107,1
+set mag_bustype = I2C
+set mag_i2c_device = 2
+set baro_hardware = NONE
+set rssi_channel = 9
+set dshot_idle_value = 650
+set dshot_burst = OFF
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set vbat_max_cell_voltage = 450
+set ibata_offset = 0
+set yaw_motors_reversed = ON
+set small_angle = 180
+set pid_process_denom = 2
+set osd_warn_core_temp = OFF
+set osd_warn_rc_smoothing = OFF
+set osd_warn_launch_control = OFF
+set osd_vbat_pos = 6599
+set osd_rssi_pos = 14777
+set osd_link_quality_pos = 2458
+set osd_rssi_dbm_pos = 342
+set osd_tim_2_pos = 6614
+set osd_flymode_pos = 4217
+set osd_g_force_pos = 6201
+set osd_throttle_pos = 6593
+set osd_vtx_channel_pos = 6177
+set osd_crosshairs_pos = 6381
+set osd_ah_sbar_pos = 6382
+set osd_ah_pos = 6254
+set osd_current_pos = 6230
+set osd_mah_drawn_pos = 6608
+set osd_craft_name_pos = 42
+set osd_pidrate_profile_pos = 4250
+set osd_warnings_pos = 6537
+set osd_avg_cell_voltage_pos = 322
+set osd_stick_overlay_left_pos = 4288
+set osd_stick_overlay_right_pos = 4310
+set osd_stat_max_spd = OFF
+set osd_stat_endbatt = ON
+set osd_stat_battery = ON
+set osd_stat_max_curr = OFF
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set osd_stat_min_link_quality = ON
+set osd_stat_total_time = ON
+set osd_profile = 2
+set debug_mode = GYRO_SCALED
+set vtx_band = 5
+set vtx_channel = 8
+set vtx_power = 3
+set vtx_low_power_disarm = UNTIL_FIRST_ARM
+set vtx_freq = 5917
+set dashboard_i2c_bus = 2
+set gyro_1_align_yaw = 1800
+set name = Nazgul 5
+
+profile 0
+
+# profile 0
+set dyn_lpf_dterm_min_hz = 98
+set dyn_lpf_dterm_max_hz = 238
+set dterm_lowpass2_hz = 210
+set vbat_pid_gain = ON
+set anti_gravity_gain = 4500
+set iterm_relax_cutoff = 10
+set yaw_lowpass_hz = 70
+set p_pitch = 55
+set d_pitch = 41
+set f_pitch = 124
+set p_roll = 50
+set d_roll = 38
+set f_roll = 117
+set p_yaw = 54
+set f_yaw = 117
+set d_min_roll = 25
+set d_min_pitch = 27
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+# default
+rateprofile 0
+
+rateprofile 1
+
+# rateprofile 1 - Joshua Bardwell
+set roll_rc_rate = 127
+set pitch_rc_rate = 127
+set roll_expo = 40
+set pitch_expo = 40
+set roll_srate = 72
+set pitch_srate = 72
+set yaw_srate = 75
+
+rateprofile 2
+
+# rateprofile 2 - Johnny FPV
+set rates_type = KISS
+set roll_rc_rate = 129
+set pitch_rc_rate = 126
+set yaw_rc_rate = 108
+set roll_expo = 21
+set pitch_expo = 20
+set yaw_expo = 7
+set roll_srate = 75
+set pitch_srate = 74
+set yaw_srate = 67
+
+rateprofile 3
+
+# rateprofile 3 - Alex Vanover
+set roll_expo = 1
+set pitch_expo = 1
+set yaw_expo = 10
+set roll_srate = 59
+set pitch_srate = 59
+set yaw_srate = 59
+
+rateprofile 4
+
+# rateprofile 4 - Le Drib
+set roll_rc_rate = 120
+set pitch_rc_rate = 120
+set yaw_rc_rate = 175
+set roll_expo = 5
+set pitch_expo = 5
+set roll_srate = 73
+set pitch_srate = 65
+set yaw_srate = 40
+
+rateprofile 5
+
+# rateprofile 5 - Mr Steele
+set rates_type = KISS
+set roll_rc_rate = 198
+set pitch_rc_rate = 198
+set yaw_rc_rate = 165
+set roll_expo = 21
+set pitch_expo = 21
+set yaw_expo = 21
+set roll_srate = 64
+set pitch_srate = 64
+set yaw_srate = 64
+
+# restore original rateprofile selection
+rateprofile 2
+
+# save configuration
+save
+# 

@@ -1,0 +1,298 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / MATEKF411RX (M41R) 4.0.0 Apr 11 2019 / 07:25:57 (9ad2cc844) MSP API: 1.41
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name MATEKF411RX
+manufacturer_id 
+mcu_id 005700363038511131343537
+signature 
+
+# name
+name Tinyhawk S
+
+# resources
+resource RX_BIND 1 B02
+
+# timer
+
+# dma
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature -TELEMETRY
+
+# beeper
+
+# beacon
+beacon RX_SET
+
+# map
+map TAER1234
+
+# serial
+serial 1 2048 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+mode_color 5 0 9
+mode_color 5 1 11
+mode_color 5 2 2
+mode_color 5 3 13
+mode_color 5 4 10
+mode_color 5 5 3
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 900 1325 0 0
+aux 2 2 1 1375 1650 0 0
+aux 3 13 2 1700 2100 0 0
+aux 4 35 3 1700 2100 0 0
+
+# adjrange
+
+# rxrange
+
+# vtx
+
+# rxfail
+
+# display_name
+
+# master
+set gyro_lowpass_type = PT1
+set gyro_lowpass_hz = 100
+set gyro_lowpass2_type = PT1
+set gyro_lowpass2_hz = 300
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 70
+set dyn_notch_min_hz = 130
+set dyn_lpf_gyro_min_hz = 0
+set acc_calibration = -96,-3,129
+set min_check = 1020
+set max_check = 2000
+set rc_smoothing_type = INTERPOLATION
+set serialrx_provider = SBUS
+set airmode_start_throttle_percent = 32
+set rx_spi_protocol = FRSKY_D
+set dshot_idle_value = 300
+set motor_pwm_protocol = DSHOT600
+set vbat_max_cell_voltage = 450
+set vbat_min_cell_voltage = 290
+set vbat_warning_cell_voltage = 320
+set vbat_detect_cell_voltage = 30
+set small_angle = 50
+set pid_process_denom = 1
+set runaway_takeoff_deactivate_throttle_percent = 25
+set osd_warn_core_temp = OFF
+set osd_warn_rc_smoothing = OFF
+set osd_warn_launch_control = OFF
+set osd_vbat_pos = 6539
+set osd_rssi_pos = 14713
+set osd_link_quality_pos = 405
+set osd_tim_2_pos = 6550
+set osd_flymode_pos = 4185
+set osd_g_force_pos = 6201
+set osd_throttle_pos = 6529
+set osd_vtx_channel_pos = 6177
+set osd_crosshairs_pos = 6349
+set osd_ah_sbar_pos = 6350
+set osd_ah_pos = 6222
+set osd_current_pos = 397
+set osd_mah_drawn_pos = 391
+set osd_craft_name_pos = 42
+set osd_pidrate_profile_pos = 4218
+set osd_warnings_pos = 6505
+set osd_stick_overlay_left_pos = 4288
+set osd_stick_overlay_right_pos = 4310
+set osd_stat_battery = ON
+set osd_stat_max_curr = OFF
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set osd_stat_min_link_quality = ON
+set osd_profile = 2
+set vtx_band = 5
+set vtx_channel = 8
+set vtx_freq = 5917
+set vcd_video_system = NTSC
+set frsky_spi_tx_id = 156,10
+set frsky_spi_offset = -41
+set frsky_spi_bind_hop_data = 1,16,31,48,61,76,93,106,121,136,151,166,181,196,211,226,6,21,36,51,66,81,96,111,126,141,156,171,186,201,216,231,11,26,41,56,71,86,101,116,131,146,161,178,191,206,223,0,0,0
+
+# profile
+profile 0
+
+set dyn_lpf_dterm_min_hz = 0
+set dterm_lowpass_type = PT1
+set dterm_lowpass_hz = 100
+set dterm_lowpass2_type = PT1
+set dterm_lowpass2_hz = 200
+set feedforward_transition = 25
+set acc_limit_yaw = 100
+set iterm_relax = RPY
+set iterm_relax_type = GYRO
+set iterm_relax_cutoff = 11
+set iterm_windup = 40
+set iterm_limit = 150
+set throttle_boost = 4
+set p_pitch = 100
+set i_pitch = 120
+set d_pitch = 90
+set f_pitch = 90
+set p_roll = 100
+set i_roll = 120
+set d_roll = 90
+set f_roll = 90
+set p_yaw = 90
+set i_yaw = 90
+set d_yaw = 40
+set f_yaw = 80
+set level_limit = 25
+set d_min_roll = 0
+set d_min_pitch = 0
+
+# profile
+profile 1
+
+set dyn_lpf_dterm_min_hz = 0
+set dterm_lowpass_type = PT1
+set dterm_lowpass_hz = 100
+set dterm_lowpass2_type = PT1
+set dterm_lowpass2_hz = 200
+set feedforward_transition = 25
+set acc_limit_yaw = 100
+set iterm_rotation = ON
+set iterm_relax = RPY
+set iterm_relax_type = GYRO
+set iterm_relax_cutoff = 11
+set iterm_windup = 40
+set iterm_limit = 150
+set throttle_boost = 4
+set p_pitch = 80
+set i_pitch = 100
+set d_pitch = 60
+set f_pitch = 70
+set p_roll = 80
+set i_roll = 100
+set d_roll = 60
+set p_yaw = 75
+set i_yaw = 90
+set d_yaw = 13
+set f_yaw = 80
+set level_limit = 25
+set d_min_roll = 0
+set d_min_pitch = 0
+
+# profile
+profile 2
+
+set vbat_pid_gain = ON
+set feedforward_transition = 25
+set p_pitch = 95
+set i_pitch = 25
+set d_pitch = 70
+set f_pitch = 90
+set p_roll = 95
+set i_roll = 25
+set d_roll = 70
+set f_roll = 90
+set p_yaw = 95
+set i_yaw = 0
+set d_yaw = 68
+set f_yaw = 90
+set angle_level_strength = 110
+set horizon_level_strength = 30
+set horizon_transition = 80
+set level_limit = 70
+
+# restore original profile selection
+profile 0
+
+# rateprofile
+rateprofile 0
+
+set thr_expo = 50
+set roll_rc_rate = 80
+set pitch_rc_rate = 80
+set yaw_rc_rate = 80
+set roll_expo = 60
+set pitch_expo = 60
+set yaw_expo = 20
+set roll_srate = 60
+set pitch_srate = 60
+set yaw_srate = 60
+set tpa_rate = 10
+set tpa_breakpoint = 1650
+
+# rateprofile
+rateprofile 1
+
+set thr_mid = 20
+set thr_expo = 50
+set roll_rc_rate = 80
+set pitch_rc_rate = 80
+set yaw_rc_rate = 80
+set roll_expo = 60
+set pitch_expo = 60
+set yaw_expo = 20
+set roll_srate = 60
+set pitch_srate = 60
+set yaw_srate = 60
+set tpa_rate = 10
+set tpa_breakpoint = 1650
+
+# rateprofile
+rateprofile 2
+
+set yaw_rc_rate = 156
+set roll_expo = 20
+set pitch_expo = 20
+set yaw_expo = 10
+set roll_srate = 80
+set pitch_srate = 80
+
+# rateprofile
+rateprofile 3
+
+set thr_expo = 50
+set roll_rc_rate = 125
+set pitch_rc_rate = 120
+set yaw_rc_rate = 108
+set roll_expo = 21
+set pitch_expo = 20
+set yaw_expo = 7
+set roll_srate = 75
+set pitch_srate = 74
+set yaw_srate = 67
+
+# rateprofile
+rateprofile 4
+
+
+# rateprofile
+rateprofile 5
+
+
+# restore original rateprofile selection
+rateprofile 2
+
+# save configuration
+save
+# 
